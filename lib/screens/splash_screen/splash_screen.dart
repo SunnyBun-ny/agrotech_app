@@ -1,8 +1,10 @@
+import 'package:agrotech_app/screens/home_screen/home.dart';
 import 'package:flame_splash_screen/flame_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashScreenGame extends StatefulWidget {
+  static const route = '/';
   const SplashScreenGame({super.key});
 
   @override
@@ -56,7 +58,8 @@ class _SplashScreenGameState extends State<SplashScreenGame> {
           );
         },
         theme: FlameSplashTheme.white,
-        onFinish: (context) => Navigator.pushReplacementNamed(context, '/home'),
+        onFinish: (context) =>
+            Navigator.pushReplacementNamed(context, HomeScreen.route),
         controller: controller,
       ),
     );
